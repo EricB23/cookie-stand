@@ -1,18 +1,18 @@
 'use strict';
+const hoursOpen = [' 6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+// how many cookies you sell per hour.
+// provide data for each hour and how many hours each store is open. 14 hours per day.
 
 const seattle = {
-location: 'Seattle',
-maxCust: 65,
-minCust 23,
-avgSale: 6.3
+  location: 'Seattle',
+  maxCust: 65,
+  minCust 23,
+  avgSale: 6.3
 
-getCust: function(){
-  console.log(this.location);
-  this.Cust = randomCust(23,65) + ' Per hour';
-  console.log(this.Cust);
-}
+randomCust function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.maxCust);
+  }
 };
-seattle.getCust();
 
 const tokyo = {
   location: 'Tokyo',
@@ -20,13 +20,11 @@ const tokyo = {
   minCust: 3,
   avgSale: 1.2
 
-  getCust2: function(){
-    console.log(this.location);
-    this.Cust = randomCust(3,24) + ' Per Hour';
-    console.log(this.Cust);
+  randomCust function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.maxCust);
   }
 };
-tokyo.getCust2();
+
 
 const dubai = {
   location: 'Dubai',
@@ -34,13 +32,11 @@ const dubai = {
   minCust: 11,
   avgSale: 3.7
 
-  getCust3: function(){
-    console.log(this.location);
-    this.Cust = randomCust(11,38) + ' Per Hour';
-    console.log(this.Cust);
+ randomCust function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.maxCust);
   }
 };
-dubai.getCust3();
+
 
 const paris = {
   location: 'Paris',
@@ -48,13 +44,11 @@ const paris = {
   minCust: 20,
   avgSale: 2.3
 
-  getCust4: function(){
-    console.log(this.location);
-    this.Cust = randomCust(20,38) + ' Per Hour';
-    console.log(this.Cust);
-}
+  randomCust function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.maxCust);
+  }
 };
-paris.getCust4();
+
 
 const lima = {
   location: 'Lima',
@@ -63,17 +57,37 @@ const lima = {
   avgSale: 4.6
 
 
-  getCust5: function(){
-    console.log(this.location);
-    this.Cust = randomCust(2,16) + ' Per Hour';
-    console.log(this.Cust);
-}
+ randomCust function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.maxCust);
+  }
 };
-lima.getCust5();
 
-function randomCust(min,max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+
+function cookieCount(city) {
+  let h2 = document.createElement('h2');
+  h2.innerText = city.name;
+  let main = document.getElementById('cities')
+  main.appendChild(ul);
+  let totalSales = 0;
+  for (let i = 0; i <= hoursOpen.length; i++) {
+    let li = doucment.createElement('li');
+    let hourlySales = math.floor(city.randomCust() * city.avgCookieSales);
+    totalSales += hourlySales;
+    li.innerText = `${hoursOpen[i]}: ${hourlySales} cookies`;
+    ul.appendChild(li);
+  }
+
+let total = document.createElement('li')
+total.innerText = `Total: ${totalSales} cookies`;
+ul.appendChild(total);
 }
-
-const parentElement = 
-document.getElementById('')
+const storeLocations = [seattle,tokyo,dubai, paris, lima];
+for (let i = 0; i <= storelocations.length; i++){
+cookieCount(storeLocations[i]);
+console.log(i);
+}
+cookieCount(seattle);
+cookieCount(tokyo);
+cookieCount(dubai);
+cookieCount(paris);
+cookieCount(lima);
