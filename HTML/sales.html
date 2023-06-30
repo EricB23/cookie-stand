@@ -1,18 +1,72 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="width-device-width, initial-scale=1.0"
+    />
 
-  <title>Sales Data</title>
-</head>
+    <title>Sales Data</title>
+    <link rel="stylesheet" href="../CSS/reset.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
 
-<body>
-  <main id="cities">
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="cities">
+        <form id="locationAdditionForm">
+          <fieldset>
+            <legend>Location Addition Form</legend>
+            <label for="cityLocation">Enter City</label>
+            <input type="text" name="cityLocation" id="cityLocation" required />
+            <label for="minCust">Minimum Sales</label>
+            <input
+              type="number"
+              min="0"
+              max="999"
+              name="minCust"
+              id="minCust"
+              required
+            />
+            <label for="maxCust">Maximum Sales</label>
+            <input
+              type="number"
+              min="0"
+              max="999"
+              name="maxCust"
+              id="maxCust"
+              required
+            />
+            <label for="avgSales">Average Cookie Sales</label>
+            <input
+              type="number"
+              min="0"
+              max="999"
+              name="avgSales"
+              id="avgSales"
+              required
+            />
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+      <div>
+        <img src="../Images/family.jpg" alt="familyPhoto" />
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="../Images/chinook.jpg" alt="chinookPicture" />
+      </div>
+    </footer>
     <script src="../JS/app.js"></script>
-  </main>
-  <footer>
-    <a href="https://github.com/jyoung57/cookie-stand/blob/main/js/app.js"
-      >Jon Young Repo on Lab 07</a
-    >
-  </footer>
-</body>
+  </body>
+</html>

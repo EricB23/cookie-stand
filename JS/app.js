@@ -33,7 +33,7 @@ City.prototype.getCustomer = function () {
 let main = document.getElementById('cities');
 let table = document.createElement('table');
 main.appendChild(table);
-const seattle = new City('seattle', 65, 23, 6.3);
+const seattle = new City('Seattle', 65, 23, 6.3);
 const tokyo = new City('Tokyo', 24, 3, 1.2);
 const dubai = new City('Dubai', 38, 11, 3.7);
 const paris = new City('Paris', 38, 20, 2.3);
@@ -118,4 +118,11 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+
+function newFooterFunction() {
+  let tfoot = document.querySelector('tfoot');
+  tfoot.remove();
+  footerFunction();
+}
+
 footerFunction();

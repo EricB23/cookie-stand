@@ -1,35 +1,104 @@
 h1 {
-  float:left;
+  float: left;
   color: brown;
   text-decoration: none;
 }
 
-body{
+body {
   background-color: aqua;
   margin: 0;
   padding: 0;
   font-family: Georgia;
 }
 
-nav li a{
+nav li a {
   display: contents;
   text-decoration: none;
   font-size: large;
   font-weight: 400;
   cursor: pointer;
   list-style: none;
-  
 }
 
-nav li a:hover{
+nav li a:hover {
   color: chocolate;
   text-decoration: underline;
   font-size: large;
   list-style: none;
 }
 
-main{
-  width: auto;
+main {
+  width: 960;
   margin: auto;
   min-height: auto;
+}
+
+input:invalid {
+  border: 2px dashed red;
+  border-width: 5px;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+td {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+}
+
+table {
+  border: solid black;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+  background-color: azure;
+}
+
+tfoot {
+  background-color: grey;
+}
+
+form {
+  background-color: whitesmoke;
+  justify-content: space-evenly;
+  padding-bottom: 5%;
+}
+
+legend {
+  display: flex;
+  font-size: 25px;
+
+  border-color: darkgreen;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 1%;
+}
+
+label {
+  font-size: 25px;
+}
+
+input {
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+fieldset {
+  justify-content: space-between;
+  display: flex;
+  height: 5%;
+  background-color: darkkhaki;
+}
+
+nav ul {
+  list-style: none;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
 }
