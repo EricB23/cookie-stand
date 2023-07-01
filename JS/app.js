@@ -76,14 +76,14 @@ City.prototype.render = function () {
     cityDataRow.appendChild(td);
     totalSales += hourlySales;
   }
-  let totalTh = document.createElement('td');
-  totalTh.innerText = totalSales;
-  cityDataRow.appendChild(totalTh);
+  let totalTd = document.createElement('td');
+  totalTd.innerText = totalSales;
+  cityDataRow.appendChild(totalTd);
   cityArray.push(citySales);
 };
 
 function footerFunction() {
-  let td = document.createElement('td');
+  let td = document.createElement('th');
   td.innerText = 'Totals';
   let tfoot = document.createElement('tfoot');
   table.appendChild(tfoot);
@@ -100,7 +100,7 @@ function footerFunction() {
   }
 
   for (let i = 0; i < totalofTotals.length; i++) {
-    let td = document.createElement('td');
+    let td = document.createElement('th');
     td.innerText = totalofTotals[i];
     tr.appendChild(td);
   }
@@ -118,6 +118,22 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+
+function handleForm(event) {
+  event.preventDefault();
+
+  const location = event.target.cityLocation.value;
+  const minCust = parseInt(event.target.minCust.value);
+  const maxCust = parseInt(event.target.maxCust.value);
+  const avg = parseInt(event.target.avgSales.value);
+
+  const newStore = new City(location, maxCust, minCust, avg);
+  newStore.render();
+  newFooterFunction();
+}
+
+let additionform = document.getElementById('locationAdditionForm');
+additionform.addEventListener('submit', handleForm);
 
 function newFooterFunction() {
   let tfoot = document.querySelector('tfoot');
