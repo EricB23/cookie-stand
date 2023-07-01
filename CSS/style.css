@@ -1,7 +1,9 @@
 h1 {
+  position: absolute
   float: left;
   color: brown;
   text-decoration: none;
+  
 }
 
 body {
@@ -11,13 +13,40 @@ body {
   font-family: Georgia;
 }
 
-nav li a {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 120px;
+ top: 10px;
+ left: 110px;
+ justify-content: space-evenly;
+ max-height: 200px;
+  width: 0;
+  border: 1px solid black;
+  
+}
+
+nav img {
+  scale: 0.6;
+}
+
+nav ul li a {
   display: contents;
   text-decoration: none;
   font-size: large;
-  font-weight: 400;
+  font-weight: 20px;
   cursor: pointer;
-  list-style: none;
+  color: black;
+
 }
 
 nav li a:hover {
@@ -28,7 +57,7 @@ nav li a:hover {
 }
 
 main {
-  width: 960;
+  width: 99vw;
   margin: auto;
   min-height: auto;
 }
@@ -61,7 +90,13 @@ tfoot {
   background-color: grey;
 }
 
+tfoot th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 form {
+  display: flex;
   background-color: whitesmoke;
   justify-content: space-evenly;
   padding-bottom: 5%;
