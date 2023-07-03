@@ -13,16 +13,18 @@
   </head>
 
   <body>
+    <h1>Sales Info</h1>
     <header>
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
         </ul>
+        <div id="logo">
+          <img src="../Images/salmon.png" alt="Picture of a salmon" />
+        </div>
       </nav>
     </header>
-    <div id="logo">
-      <img src="../Images/salmon.png" alt="Picture of a salmon" />
-    </div>
+
     <main>
       <section id="cities">
         <form id="locationAdditionForm">
@@ -38,6 +40,7 @@
               name="minCust"
               id="minCust"
               required
+              step="0.1"
             />
             <label for="maxCust">Maximum Sales</label>
             <input
@@ -47,6 +50,7 @@
               name="maxCust"
               id="maxCust"
               required
+              step="0.1"
             />
             <label for="avgSales">Average Cookie Sales</label>
             <input
@@ -56,6 +60,7 @@
               name="avgSales"
               id="avgSales"
               required
+              step="0.1"
             />
             <button type="submit">Submit</button>
           </fieldset>
@@ -65,11 +70,7 @@
         <img src="../Images/family.jpg" alt="familyPhoto" />
       </div>
     </main>
-    <footer>
-      <div>
-        <img src="../Images/chinook.jpg" alt="chinookPicture" />
-      </div>
-    </footer>
+    <footer></footer>
     <script src="../JS/app.js"></script>
   </body>
 </html>
